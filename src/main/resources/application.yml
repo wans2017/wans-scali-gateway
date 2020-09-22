@@ -1,5 +1,5 @@
 server:
-  port: 80 ## http为80(默认8080);https为443
+  port: 81 ## http为80(默认8080);https为443
 
 spring:
   application:
@@ -12,18 +12,18 @@ spring:
           ## 开启以服务id(服务名称)去注册中心nacos上获取地址
           enable: true
       ## 路由策略
-      routes:
-        ## 路由id
-        - id: wans
-          ## 转发到路径,注：后面最好加上/
-          ## lb为loadbalance简写，wans-member对应服务名称
-          uri: lb://wans-member/
-          filters:
-            ## 去掉1个前缀，例如：/member/wans/getUser最后转发为/wans/getUser;PrefixPath则是加前缀
-            - StripPrefix=1
-          ## 匹配规则
-          predicates:
-            - Path=/member/**
+#      routes:
+#        ## 路由id
+#        - id: wans
+#          ## 转发到路径,注：后面最好加上/
+#          ## lb为loadbalance简写，wans-member对应服务名称
+#          uri: lb://wans-member/
+#          filters:
+#            ## 去掉1个前缀，例如：/member/wans/getUser最后转发为/wans/getUser;PrefixPath则是加前缀
+#            - StripPrefix=1
+#          ## 匹配规则
+#          predicates:
+#            - Path=/member/**
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
