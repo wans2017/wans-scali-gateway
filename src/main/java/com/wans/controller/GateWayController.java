@@ -17,6 +17,6 @@ public class GateWayController {
      */
     @GetMapping("/syncGateWayCfg")
     public String syncGateWayCfg() {
-        return gateWayService.loadRoute();
+        return gateWayService.initAllRoute();
     }
 }
