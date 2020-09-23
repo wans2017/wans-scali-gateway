@@ -29,7 +29,7 @@ spring:
         server-addr: 127.0.0.1:8848
 ## 访问地址: 127.0.0.1:{port}/wans 替换为uri(http://www.baidu.com/)
   datasource:
-    url: jdbc:mysql://localhost/gateway?&useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://localhost/gateway?&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
     username: root
     password: wans
     driver-class-name: com.mysql.cj.jdbc.Driver
